@@ -1,0 +1,33 @@
+import React, { Component } from 'react';
+import { TouchableOpacity, StyleSheet, View, Text } from 'react-native'
+
+const App = () => {
+   return (
+      <View style = {styles.container}>
+         <TouchableOpacity>
+            <Text style = {styles.text}>
+               .
+            </Text>
+         </TouchableOpacity>
+      </View>
+   )
+}
+
+const styles = StyleSheet.create ({
+   container: {
+      alignItems: 'flex-start',
+	
+   },
+   text: {
+      borderWidth: 1,
+      padding: 4,
+	fontSize: 5,
+      borderColor: 'black',
+      backgroundColor: 'red'
+   }
+})
+
+
+
+
+export default App;
