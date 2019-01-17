@@ -1,0 +1,16 @@
+To download go into your folder and go into the Android folder inside that folder
+Then type in the command
+Then go out of the Android folder (cd..)
+Then run: react-native run-android 
+
+
+Grid:
+npm install react-native-easy-grid --save
+
+
+Icons:
+npm i react-native-vector-icons
+react-native link
+
+
+import Icon from 'react-native-vector-icons/FontAwesome';
