@@ -1,0 +1,238 @@
+import React, { Component } from 'react';
+import {AppRegistry, NetInfo, Linking, Alert, Button, TextInput, View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Col, Row, Grid } from "react-native-easy-grid";
+import Icon from 'react-native-vector-icons/FontAwesome';
+import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
+import FileViewer from 'react-native-file-viewer';
+import RNFS from "react-native-fs"
+var small, medium, large;
+
+small = 0;
+medium=100;
+large=400;
+
+var sizeselection=medium; //change this line to change the button size
+
+if (sizeselection==small){
+  padselectionheight=60;
+  padselectionwidth=240; //not changing the width but you could in the future
+}
+if(sizeselection==medium){
+  padselectionheight=100;
+  padselectionwidth=240;
+}
+if(sizeselection==large){
+  padselectionheight=150;
+  padselectionwidth=240;
+}
+
+
+export default class GridView extends Component {
+
+   render() {
+        return (
+
+          <Grid>
+          <View style={styles.container}>
+          <Col>
+            <View
+              style={{
+                flex: 1,
+                flexDirection: 'column',
+                justifyContent: 'space-around',
+                alignItems: "center"
+              }}
+            >
+
+            <TouchableOpacity>
+            <View
+
+              style={{
+                backgroundColor: "#FE434C",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius:10,
+                width: 240,
+                marginTop: 30,
+                height: padselectionheight,
+                padding: 10,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+              }}
+            >
+
+            <Icon
+              name="sticky-note"
+              color="white"
+              size={50}
+            />
+
+            <Text style={{ color: "white" ,fontSize: 30}}>Notepad</Text>
+            </View>
+            </TouchableOpacity >
+
+            <TouchableOpacity onPress={() => {Linking.openURL('https://outlook.office365.com/owa/')}}>
+            <View
+              style={{
+                backgroundColor: "#FE434C",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 10,
+                width: 240,
+                marginTop: 30,
+                height: padselectionheight,
+                padding: 10,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+              }}
+            >
+
+            <Icon
+              name="envelope"
+              color="white"
+              size={50}
+            />
+
+            <Text style={{ color: "white",fontSize: 30  }}>Email</Text>
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+            <View
+              style={{
+                backgroundColor: "#FE434C",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 10,
+                width: 240,
+                marginTop: 30,
+                height: padselectionheight,
+                padding: 10,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+              }}
+            >
+
+            <Icon
+              name="comment"
+              color="white"
+              size={50}
+            />
+
+            <Text style={{ color: "white" ,fontSize: 30 }}>Keyboard</Text>
+            </View>
+            </TouchableOpacity>
+            </View>
+          </Col>
+
+          <Col>
+            <View
+              style={{
+                flex: 1,
+                flexDirection: 'column',
+                justifyContent: 'space-around',
+                alignItems: "center"
+              }}
+            >
+
+            <TouchableOpacity>
+            <View
+              style={{
+                backgroundColor: "#FE434C",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 10,
+                width:240,
+                marginTop: 30,
+                height: padselectionheight,
+                padding: 10,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+              }}
+            >
+
+            <Icon
+              name="pencil"
+              color="white"
+              size={50}
+            />
+
+            <Text style={{ color: "white",fontSize: 30  }}>Customize</Text>
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => {Linking.openURL('https://google.com')}}>
+            <View
+              style={{
+                backgroundColor: "#FE434C",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 10,
+                width: 240,
+                marginTop: 30,
+                height: padselectionheight,
+                padding: 10,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+              }}
+            >
+
+            <Icon
+              name="internet-explorer"
+              color="white"
+              size={50}
+            />
+
+            <Text style={{ color: "white",fontSize: 30  }}>Browser</Text>
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => {Linking.openURL('https://king.com/play/candycrush')}}>
+            <View
+              style={{
+                backgroundColor: "#FE434C",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 10,
+                width: 240,
+                marginTop: 30,
+                height: padselectionheight,
+                padding: 10,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+              }}
+            >
+
+            <Icon
+              name="gamepad"
+              color="white"
+              size={50}
+            />
+
+            <Text style={{ color: "white",fontSize: 30 }}>Game</Text>
+            </View>
+            </TouchableOpacity>
+            </View>
+          </Col>
+
+          </View>
+          </Grid>
+        );
+      }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+	       padding: 60,
+    },
+    text: {
+        borderWidth: 5,
+        padding:100,
+	      fontSize: 30,
+        borderColor: 'black',
+        backgroundColor: 'blue'
+    }
+});
