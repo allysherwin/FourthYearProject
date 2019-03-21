@@ -3,7 +3,7 @@ import {Linking, Alert, Button, View, StyleSheet, Text, TouchableOpacity } from 
 import { Col, Row, Grid } from "react-native-easy-grid";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
-import FileViewer from 'react-native-file-viewer';
+
 var small, medium, large, sizeselection, padselectionheight, padselectionwidth;
 padselectionheight=100;
 small = 100;
