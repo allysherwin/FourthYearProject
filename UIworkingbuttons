@@ -3,7 +3,7 @@ import {Linking, Alert, Button, View, StyleSheet, Text, TouchableOpacity } from 
 import { Col, Row, Grid } from "react-native-easy-grid";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
-import FileViewer from 'react-native-file-viewer';
+
 
 
 export default class GridView extends Component {
@@ -22,7 +22,7 @@ export default class GridView extends Component {
               }}
             >
 
-            <TouchableOpacity onPress={() => {Linking.openURL('http:/file://C:/Users/Ally/Documents/Desktop')}}>
+            <TouchableOpacity>
             <View
               style={{
                 backgroundColor: "#FE434C",
