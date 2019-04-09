@@ -22,7 +22,7 @@ export default class GridView extends Component {
               }}
             >
 
-            <TouchableOpacity onPress={() => {Linking.openURL('https://outlook.office365.com/owa/')}}>
+            <TouchableOpacity onPress={() => {Linking.openURL('https://anotepad.com/')}}>
             <View
               style={{
                 backgroundColor: "#FE434C",
